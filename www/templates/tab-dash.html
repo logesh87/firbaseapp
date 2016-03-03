@@ -1,0 +1,29 @@
+<ion-view view-title="Login">
+    <ion-content>
+
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" placeholder="email" required ng-model="user.email">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="password" required ng-model="user.password">
+            </label>
+    
+             <button type="submit" ng-click="createUser()" class="button button-block button-positive" >
+                <strong>Create User</strong>
+             </button>
+             
+             <button type="submit" ng-click="login('facebook')" class="button button-block button-positive" >
+                <strong>FB Login</strong>
+             </button>
+             
+             <button type="submit" ng-click="login('google')" class="button button-block button-positive" >
+                <strong>Google Login</strong>
+             </button>
+            
+             <p ng-if="message">Message: <strong>{{ message }}</strong></p>
+             <p ng-if="error">Error: <strong>{{ error }}</strong></p>
+        </div>
+        
+    </ion-content>
+</ion-view>
